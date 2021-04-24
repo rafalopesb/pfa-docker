@@ -23,11 +23,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/cursos', function()
 {
     $cursos = DB::table('cursos')->get()->toArray();
-
+    $lista = [];
     foreach($cursos as $curso) {
         $lista[] = $curso->nome;
     }
-    
+
     echo "<h1>Cursos</h1>";
     return $lista;
 });
