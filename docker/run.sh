@@ -1,3 +1,5 @@
+docker network create --driver bridge minharede
+
 docker build -t rafalopesb/mysql ./mysql
 docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
 
