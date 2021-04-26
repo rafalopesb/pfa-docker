@@ -14,7 +14,7 @@ Crie uma pasta, entre dentro dela e execute `git clone https://github.com/rafalo
 ### Método 1:
 Na mesma pasta execute os seguintes comandos:
 
-* > - docker network create --driver bridge minharede
+>   - docker network create --driver bridge minharede
 * > MYSQL
      - docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
 * > PHP
