@@ -14,7 +14,7 @@ Crie uma pasta, entre dentro dela e execute `git clone https://github.com/rafalo
 ### Método 1:
 Na mesma pasta execute os seguintes comandos:
 
-* > docker network create --driver bridge minharede
+* > - docker network create --driver bridge minharede
 * > MYSQL
      - docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
 * > PHP
@@ -22,8 +22,11 @@ Na mesma pasta execute os seguintes comandos:
 * > NGINX
     - docker run -d --network minharede --name nginx --rm -v $(pwd)/:/var/www/html -p 80:80 rafalopesb/nginx 
 
-* Instale o composer - `docker exec -ti phpcontainer composer install --working-dir=/var/www/html/pfa-fullcycle`
-* Execute os migrations com o comando `docker exec -ti phpcontainer sh /tmp/run.sh`
+* > Composer 
+    - docker exec -ti phpcontainer composer install --working-dir=/var/www/html/pfa-fullcycle
+
+* > Executar os migrations
+    - docker exec -ti phpcontainer sh /tmp/run.sh
 
 ### Método 2:
 Caso prefira apenas entre na pasta docker encontrada na raiz do projeto e execute o arquivo `./run.sh`. Ele irá executar todos os comandos necessários para a aplicação executar!
