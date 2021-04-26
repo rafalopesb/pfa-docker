@@ -10,5 +10,5 @@ docker build -t rafalopesb/nginx ./nginx
 docker run -d --network minharede --name nginx --rm -v $(pwd)../../..:/var/www/html -p 80:80 rafalopesb/nginx 
 
 sleep 5
-
+docker exec -ti phpcontainer composer install --working-dir=/var/www/html/pfa-fullcycle
 docker exec -ti phpcontainer sh /tmp/run.sh
