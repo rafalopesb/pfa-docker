@@ -22,7 +22,8 @@ Na mesma pasta execute os seguintes comandos:
 * > NGINX
     - docker run -d --network minharede --name nginx --rm -v $(pwd)/:/var/www/html -p 80:80 rafalopesb/nginx 
 
-Execute os migrations com o comando `docker exec -ti phpcontainer sh /tmp/run.sh`
+* Instale o composer - `docker exec -ti phpcontainer composer install --working-dir=/var/www/html/pfa-fullcycle`
+* Execute os migrations com o comando `docker exec -ti phpcontainer sh /tmp/run.sh`
 
 ### Método 2:
 Caso prefira apenas entre na pasta docker encontrada na raiz do projeto e execute o arquivo `./run.sh`. Ele irá executar todos os comandos necessários para a aplicação executar!
