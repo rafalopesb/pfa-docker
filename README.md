@@ -9,10 +9,10 @@
 
 ## Instalação
 
-Crie uma pasta, entre dentro dela e execute `git clone https://github.com/rafalopesb/pfa-docker.git pfa-fullcycle`
+Crie uma pasta chamada desafio, entre dentro dela e execute `git clone https://github.com/rafalopesb/pfa-docker.git pfa-fullcycle`
 
 ### Método 1:
-Na mesma pasta execute os seguintes comandos:
+Ainda na pasta desafio execute os seguintes comandos:
 
 * > Criar uma rede
    - docker network create --driver bridge minharede
