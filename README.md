@@ -15,9 +15,12 @@ Crie uma pasta, entre dentro dela e execute `git clone https://github.com/rafalo
 Na mesma pasta execute os seguintes comandos:
 
 * > docker network create --driver bridge minharede
-* > MYSQL - docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
-* > PHP - docker run -d -v $(pwd):/var/www/html --network minharede --name phpcontainer rafalopesb/php
-* > NGINX - docker run -d --network minharede --name nginx --rm -v $(pwd)/:/var/www/html -p 80:80 rafalopesb/nginx 
+* > MYSQL
+     - docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
+* > PHP
+    - docker run -d -v $(pwd):/var/www/html --network minharede --name phpcontainer rafalopesb/php
+* > NGINX
+    - docker run -d --network minharede --name nginx --rm -v $(pwd)/:/var/www/html -p 80:80 rafalopesb/nginx 
 
 Execute os migrations com o comando `docker exec -ti phpcontainer sh /tmp/run.sh`
 
