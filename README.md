@@ -27,3 +27,8 @@ Na mesma pasta execute os seguintes comandos:
 
 ### Método 2:
 Caso prefira apenas entre na pasta docker encontrada na raiz do projeto e execute o arquivo `./run.sh`. Ele irá executar todos os comandos necessários para a aplicação executar!
+
+
+## Testando a aplicação
+
+Se tudo ocorrer bem acesse http://localhost/api/cursos e veja a lista de cursos sendo exibida.
