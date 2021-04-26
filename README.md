@@ -9,15 +9,17 @@
 
 ## Instalação
 
-Crie uma pasta, entre dentro dela e execute git clone https://github.com/rafalopesb/pfa-docker.git
+Crie uma pasta, entre dentro dela e execute `git clone https://github.com/rafalopesb/pfa-docker.git pfa-fullcycle`
 
+### Método 1:
 Na mesma pasta execute os seguintes comandos:
 
-docker network create --driver bridge minharede
-MYSQL - docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
-PHP - docker run -d -v $(pwd):/var/www/html --network minharede --name phpcontainer rafalopesb/php
-NGINX - docker run -d --network minharede --name nginx --rm -v $(pwd)/:/var/www/html -p 80:80 rafalopesb/nginx 
+* > docker network create --driver bridge minharede
+* > MYSQL - docker run -d -e MYSQL_ROOT_PASSWORD=root --network minharede --name mysql rafalopesb/mysql   
+* > PHP - docker run -d -v $(pwd):/var/www/html --network minharede --name phpcontainer rafalopesb/php
+* > NGINX - docker run -d --network minharede --name nginx --rm -v $(pwd)/:/var/www/html -p 80:80 rafalopesb/nginx 
 
-Execute os migrations com o comando docker exec -ti phpcontainer sh /tmp/run.sh
+Execute os migrations com o comando `docker exec -ti phpcontainer sh /tmp/run.sh`
 
-Caso prefira apenas entre na pasta docker do projeto e execute o arquivo ./run.sh e ele executar todos os comandos necessários para a aplicação executar!
+### Método 2:
+Caso prefira apenas entre na pasta docker encontrada na raiz do projeto e execute o arquivo `./run.sh`. Ele irá executar todos os comandos necessários para a aplicação executar!
